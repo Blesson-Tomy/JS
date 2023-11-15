@@ -10,31 +10,31 @@
     <nav>
         <h2>Form Validation</h2>
     </nav>
-    <form class="body">
+    <form onsubmit= " return validate()" action="message.html" class="body">
         <div>
         <input type="text" id="num1" placeholder="Enter the 1st Number:">
         </div>
         <div>
         <input type="password" id="num2" placeholder="Enter the 2nd Number:">
         </div>
-        <input type="submit" onsubmit= "validate()"></input>
+        <input type="submit"></input>
         <h1 id="here"></h1>
+        <h6>Psssst.....If your here to check the page, please login!</h6>
     </form>
 <script>
-    function validate()
+    function validate() 
     {
-    var name = document.getElementById("num1").value
-    var pass = document.getElementById("num2").value
-    if (name == "") 
+    var name = document.getElementById("num1");
+    var pass = document.getElementById("num2");
+    if (name.value.trim() == "" || pass.value.trim() == "") 
     {
-    alert("Name must be filled out");
-    
+        alert("No empty fields allowed!");
+        return false;
     }
-  if (pass == "") 
-  {
-    alert("Password must be filled out");
-   
-  }
+    else
+    {
+        true;
+    }
     }
 
 </script>
