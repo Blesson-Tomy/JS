@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <nav>
+        <h2>Form Validation</h2>
+    </nav>
+    <form class="body">
+        <div>
+        <input type="text" id="num1" placeholder="Enter the 1st Number:">
+        </div>
+        <div>
+        <input type="password" id="num2" placeholder="Enter the 2nd Number:">
+        </div>
+        <input type="submit" onsubmit= "validate()"></input>
+        <h1 id="here"></h1>
+    </form>
+<script>
+    function validate()
+    {
+    var name = document.getElementById("num1").value
+    var pass = document.getElementById("num2").value
+    if (name == "") 
+    {
+    alert("Name must be filled out");
+    
+    }
+  if (pass == "") 
+  {
+    alert("Password must be filled out");
+   
+  }
+    }
+
+</script>
+
+</body>
+</html>

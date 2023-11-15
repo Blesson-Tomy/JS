@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <h2>EMI Calculator</h2>
+    </nav>
+    <div class="body">
+        <div>
+             <input type="number" id="P" placeholder="Loan Amount:">
+        </div>
+        <div>
+             <input type="number" id="R" placeholder="Rate of Interest (per annum):">
+        </div>
+        <div>
+            <input type="number" id="n" placeholder="Loan Tenure (in Months):">
+        </div>
+
+        <button onclick="add()">Calculate</button>
+        <h1 id="here"></h1>
+
+    </div>
+<script>
+    function add()
+    {
+    var amount = document.getElementById("P").value
+    var rate = document.getElementById("R").value
+    var tenure = document.getElementById("n").value
+
+   var emi = ((amount * rate * (1+rate)**tenure)/(((1+rate)**tenure)-1));
+        
+
+        document.getElementById("here").innerHTML = emi
+
+    }
+</script>
+
+</body>
+</html>
+
+

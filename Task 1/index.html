@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Random Die Roller</title>
+</head>
+<body>
+    <nav>
+        <h2>RANDOM DICE ROLLER</h2>
+    </nav>
+    <div class="body">
+        <div class="screen">
+            <h1 id="disp"></h1>
+
+        </div>
+        <div id="button">
+            <button onclick="rollButton()">Roll the Dice</button>
+        </div>
+    </div>
+    
+
+<script>
+    //var disp = document.getElementById("disp")
+    document.getElementById("disp").innerHTML = show
+
+    function rollButton() 
+    {
+     var show ="Your roll is " + dieRoll()
+     document.getElementById("disp").innerHTML = show
+     
+    }
+
+    function dieRoll()
+    {
+        return Math.floor(Math.random() * 6) + 1;
+    }
+
+</script>
+</body>
+</html>
